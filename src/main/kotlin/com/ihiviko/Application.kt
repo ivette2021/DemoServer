@@ -1,4 +1,4 @@
-package com.ihiviko.com.ihiviko
+package com.ihiviko
 
 import io.ktor.server.application.*
 import io.ktor.server.response.*
