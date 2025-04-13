@@ -14,7 +14,7 @@ fun Application.module(){
     routing {
         //nuestro servidor respondera a una solicitud get
         get("/") {
-            call.respondText("hello world, I'm ihiviko")
+            call.respondText("hello world, I'm ihiviko")//nuestro servidor respondera con este simple texto
         }
     }
 }
