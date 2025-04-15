@@ -1,6 +1,7 @@
 plugins {
     application
     kotlin("jvm") version "2.1.10"
+    kotlin("plugin.serialization") version "2.1.10" //plugin para anotaciones
 }
 
 group = "com.ihiviko"
@@ -22,6 +23,8 @@ dependencies {
     implementation("io.ktor:ktor-server-core:3.1.2")
     implementation("io.ktor:ktor-server-netty:$ktor_version")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")//runtime
 
 }
 
