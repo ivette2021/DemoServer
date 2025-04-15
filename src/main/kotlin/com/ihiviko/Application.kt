@@ -1,6 +1,7 @@
 package com.ihiviko
 
 import io.ktor.server.application.*
+import io.ktor.server.plugins.calllogging.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
@@ -8,8 +9,9 @@ import io.ktor.server.routing.*
 fun main(args: Array<String>):Unit = io.ktor.server.netty.EngineMain.main(args)
 
 //declararemos todo lo necesario para nuestro servidor de backend
-
+@Suppress("unused")
 fun Application.module(){
+    install(CallLogging)
 //llamare una funcion de enrutamiento
     routing {
         //nuestro servidor respondera a una solicitud get

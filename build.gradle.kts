@@ -13,12 +13,15 @@ repositories {
     mavenCentral()
 }
 
+val ktor_version: String by project
+val logback_version: String by project
+val kotlin_version: String by project
 dependencies {
     testImplementation(kotlin("test"))
-    //implementation(kotlin("stdlib"))
+    implementation("io.ktor:ktor-server-call-logging:$ktor_version")
     implementation("io.ktor:ktor-server-core:3.1.2")
-    implementation("io.ktor:ktor-server-netty:3.1.2")
-    implementation("ch.qos.logback:logback-classic:1.5.18")
+    implementation("io.ktor:ktor-server-netty:$ktor_version")
+    implementation("ch.qos.logback:logback-classic:$logback_version")
 
 }
 
